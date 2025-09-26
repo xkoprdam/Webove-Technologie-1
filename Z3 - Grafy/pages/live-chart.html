@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z3 - Sinusoidy</title>
+
+    <link href="bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1/dist/chartjs-plugin-zoom.min.js"></script>
+
+    <script src="../components/range-slider.js" type="module"></script>
+</head>
+<body>
+
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" class="bi me-2" viewBox="0 0 16 16">
+                    <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2m-2 11.5v-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5m-2.5.5a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5zm-3 0a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5z"/>
+                </svg>
+                <span class="fs-4">B-WEBTE1 Zadanie 3</span>
+            </a>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Výsledky študentov</a></li>
+                <li class="nav-item"><a href="live-chart.html" class="nav-link active">Sinusoidy</a></li>
+            </ul>
+        </header>
+
+        <canvas id="lineChart"></canvas>
+
+        <br>
+        <div class="row">
+            <div class="col">
+                <input type="checkbox" id="toggle-sin" checked>
+                <label for="toggle-sin">Show sin</label>
+            </div>
+            <div class="col">
+                <input type="checkbox" id="toggle-cos" checked>
+                <label for="toggle-cos">Show cos</label>
+            </div>
+            <div class="col">
+                <button id="stop">Stop</button>
+            </div>
+            <div class="col">
+                <button id="zoom-reset">Reset zoom</button>
+            </div>
+        </div>
+
+        <range-slider id="slider" minimal="" maximal=""></range-slider>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

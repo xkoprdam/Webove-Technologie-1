@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Z3 - Výsledky študentov</title>
+  <link href="pages/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" class="bi me-2" viewBox="0 0 16 16">
+          <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2m-2 11.5v-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5m-2.5.5a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5zm-3 0a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5z"/>
+        </svg>
+        <span class="fs-4">B-WEBTE1 Zadanie 3</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="index.html" class="nav-link active">Výsledky študentov</a></li>
+        <li class="nav-item"><a href="pages/live-chart.html" class="nav-link">Sinusoidy</a></li>
+      </ul>
+    </header>
+
+    <div class="row">
+      <div class="col">
+        <canvas id="barChartResults"></canvas>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <canvas id="stackedBarChart"></canvas>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <canvas id="pieChart1617"></canvas>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <canvas id="pieChart1718"></canvas>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <canvas id="pieChart1819"></canvas>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <canvas id="pieChart1920"></canvas>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <canvas id="pieChart2021"></canvas>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <canvas id="pieChart2122"></canvas>
+      </div>
+    </div>
+
+    <br><br><br>
+
+
+    <br><br><br>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

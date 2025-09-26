@@ -1,0 +1,285 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("Roboto-Light.ttf");
+}
+
+body {
+    font-family: "Roboto";
+    text-align: justify;
+    font-size: 16px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.top {
+    width: 100%;
+    background-color: green;
+}
+
+ul.navbar {
+    width: 60%;
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+li.menu-element {
+    float: left;
+    width: 10em;
+}
+
+li.menu-element a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1em 2em;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: brown;
+  }
+
+li.menu-element a.active {
+    color: white;
+    background-color: blueviolet;
+}
+
+section {
+    width: 60%;
+    margin: auto;
+}
+
+footer {
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding: 1em;
+    margin-top: 2em;
+    text-align: center;
+}
+
+img {
+    border-radius: 8px;
+}
+
+
+/* index -------------------------------------------------------- */
+
+aside {
+    width: 30%;
+    margin-left: 1em;
+    padding: 0em 1em 0em 1em;
+    float: right;
+    font-style: italic;
+    background-color: #e8e7e7;
+    font-size: 18px;
+    text-align: right;
+    border-radius: 8px;
+}
+
+img.my-portrait {
+    float: left;
+    margin: 0em 1em 0em 0em;
+}
+
+
+/* cv -------------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    text-align: left;
+    display: flex;
+}
+
+.column {
+    float: left;
+    padding: 1em;
+    flex: 1;
+}
+  
+.left {
+    flex: 35%;
+    background-color: #c5c5c5;
+    border-radius: 8px 0 0 8px;
+}
+  
+.right {
+    flex: 65%;
+    background-color: #dbdbdb;
+    border-radius: 0 8px 8px 0;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+a.mailto {
+    color: blueviolet;
+}
+
+a.social {
+    color: green;
+}
+
+a.tel {
+    color: brown;
+}
+
+
+
+
+/* timetable --------------------------------------------------------- */
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th.double-lesson {
+    width: 12em;
+}
+
+th.single-lesson {
+    width: 6em;
+}
+
+tr:nth-child(even) {
+    background-color: #D6EEEE;
+}
+
+td.lecture {
+    background-color: cadetblue;
+}
+
+td.seminar {
+    background-color: rgb(131, 193, 196);
+}
+
+td.fitness {
+    background-color: rgb(95, 160, 104);
+}
+
+
+
+/* Picture -------------------------------------------------------- */
+
+.image_container {
+    position: relative;
+}
+
+.marker-text-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.marker{
+    opacity: 0.5;
+    position: absolute;
+}
+
+.marker:hover {
+    opacity: 1;
+    transition: .5s ease;
+}
+
+.text{
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    border: solid 2px green;
+    width: 10em;
+    background-color: white;
+    padding: 0;
+}
+
+/* me */
+.marker-1 {
+    left: 362px;
+    top: 90px;
+}
+
+.text-1 {
+    left: 400px;
+    top: 80px;
+}
+
+.marker-1:hover + .text-1{
+    opacity: 1;
+    transition: .8s ease;
+}
+
+/* kubo */
+.marker-2{
+    left: 283px;
+    top: 90px;
+}
+
+.text-2{
+    left: 110px;
+    top: 80px;
+}
+
+.marker-2:hover + .text-2{
+    opacity: 1;
+    transition: .8s ease;
+}
+
+/* ondrej */
+.marker-3{
+    left: 209px;
+    top: 320px;
+}
+
+.text-3{
+    left: 40px;
+    top: 310px;
+}
+
+.marker-3:hover + .text-3{
+    opacity: 1;
+    transition: .8s ease;
+}
+
+/* tomero */
+.marker-4{
+    left: 473px;
+    top: 190px;
+}
+
+.text-4{
+    left: 510px;
+    top: 180px;
+}
+
+.marker-4:hover + .text-4{
+    opacity: 1;
+    transition: .8s ease;
+}
+
+/* Tofana */
+.marker-5{
+    left: 360px;
+    top: 440px;
+}
+
+.text-5{
+    left: 290px;
+    top: 380px;
+}
+
+.marker-5:hover + .text-5{
+    opacity: 1;
+    transition: .8s ease;
+}

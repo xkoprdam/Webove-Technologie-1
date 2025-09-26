@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    width: 100%;
+    height: 700px;
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.marker {
+    background-image: url('../data/marker.svg');
+    background-size: cover;
+    width: 20px;
+    height: 48px;
+    cursor: pointer;
+}
+
+
+/*@media (min-height: 768px) {*/
+/*    #map {*/
+/*        height: 720px;*/
+/*    }*/
+/*}*/
+
+/*@media (min-height: 992px) {*/
+/*    #map {*/
+/*        height: 720px;*/
+/*    }*/
+/*}*/
+
+/*@media (min-height: 1200px) {*/
+/*    #map {*/
+/*        height: 720px;*/
+/*    }*/
+/*}*/

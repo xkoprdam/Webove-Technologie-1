@@ -1,0 +1,177 @@
+html {
+    max-width: 80ch;
+    padding: 3em 1em;
+    margin: auto;
+    line-height: 1.5;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.required:after {
+    content:"*";
+    color: red;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+.err-msg {
+    color: darkred;
+    font-weight: bold;
+    font-size: 0.7em;
+}
+
+.default-hidden {
+    visibility: hidden;
+}
+
+#char-count {
+    font-size: 12px;
+    color: grey;
+    text-align: left;
+}
+
+#additional-text.max-char-exceeded {
+    border: 2px solid darkred;
+}
+
+label {
+    font-size: 14px;
+    margin-left: 1px;
+}
+
+label.radio {
+    float: left;
+    text-align: left;
+    margin-right: 0;
+    width: auto;
+}
+
+label.list {
+    width: 14em;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    line-height: 1;
+}
+
+.modal-window {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 2em;
+    border: 1px solid #888;
+    border-radius: 15px;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+select {
+    padding: 3px;
+    margin-bottom: 5px;
+}
+
+option {
+    padding: 2px;
+}
+
+input {
+    width: 15em;
+    padding: 5px;
+}
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 13px;
+    height: 13px;
+    border: 2px solid #0c5e08;
+    border-radius: 50%;
+    background-color: white;
+    transition: background-color 0.2s, border 0.2s;
+}
+
+input[type="radio"]:checked {
+    background-color: #0c5e08;
+    border: 2px solid #0c5e08;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 13px;
+    height: 13px;
+    border: 2px solid #0c5e08;
+    background-color: white;
+    transition: background-color 0.2s, border 0.2s;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #0c5e08;
+    border: 2px solid #0c5e08;
+}
+
+.button-container {
+    text-align: center;
+}
+
+button {
+    color: #0c5e08;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 2em;
+    background-color: #f2f2f2;
+}
+
+.column {
+    padding: 1em;
+}
+
+
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        padding: 3em;
+    }
+    .column {
+        flex: 1;
+    }
+}

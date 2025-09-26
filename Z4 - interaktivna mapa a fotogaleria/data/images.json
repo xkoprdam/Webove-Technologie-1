@@ -1,0 +1,74 @@
+{
+  "images": [
+    {
+      "name": "Chleb 1",
+      "description": "Lyžovanie pod Chlebom",
+      "url": "./img/chleb1.jpg",
+      "timestamp": "2022-11-01",
+      "coordinates": [19.042228, 49.208735]
+    },
+    {
+      "name": "Chleb 2",
+      "description": "Východ slnka na Chlebe",
+      "url": "./img/chleb2.jpg",
+      "timestamp": "2022-11-01",
+      "coordinates": [19.042228, 49.208735]
+    },
+    {
+      "name": "Chleb 3",
+      "description": "Severná strana Chlebu",
+      "url": "./img/chleb3.jpg",
+      "timestamp": "2022-11-01",
+      "coordinates": [19.042228, 49.208735]
+    },
+    {
+      "name": "Bobot",
+      "description": "Bobotov Kuk v Čiernej Hore",
+      "url": "./img/ciernahora.jpg",
+      "timestamp": "2022-11-02",
+      "coordinates": [19.01952480515135, 43.1042384393368]
+    },
+    {
+      "name": "Dolomity",
+      "description": "Ferrata v Dolomitoch",
+      "url": "./img/dolomity.jpg",
+      "timestamp": "2022-11-02",
+      "coordinates": [12.065502500684204, 46.53412888192321]
+    },
+    {
+      "name": "Gruzínsko 1",
+      "description": "Gruzínsko 1",
+      "url": "./img/gruzinsko1.jpg",
+      "timestamp": "2022-11-03",
+      "coordinates": [44.61404106242017, 42.66437707980353]
+    },
+    {
+      "name": "Gruzínsko 2",
+      "description": "Gruzínsko 2",
+      "url": "./img/gruzinsko2.jpg",
+      "timestamp": "2022-11-03",
+      "coordinates": [44.61404106242017, 42.66437707980353]
+    },
+    {
+      "name": "Osnica",
+      "description": "Osnica v Malej Fatre",
+      "url": "./img/osnica.jpg",
+      "timestamp": "2022-11-04",
+      "coordinates": [19.06804073732161, 49.231647322370634]
+    },
+    {
+      "name": "Rumunsko",
+      "description": "Ferrata v Rumunsku",
+      "url": "./img/rumunsko.jpg",
+      "timestamp": "2022-11-04",
+      "coordinates": [23.688701778222935, 46.563498680263194]
+    },
+    {
+      "name": "Veľká Fatra",
+      "description": "Rázcestník vo Veľkej Fatre",
+      "url": "./img/velkafatra.jpg",
+      "timestamp": "2022-11-04",
+      "coordinates": [19.07477527852947, 48.85299165000629]
+    }
+  ]
+}

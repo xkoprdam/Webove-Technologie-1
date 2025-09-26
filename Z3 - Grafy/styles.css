@@ -1,0 +1,53 @@
+.bi {
+    vertical-align: -.125em;
+    fill: rgba(25,155,214);
+}
+
+.fs-4 {
+    color: rgb(65,59,54);
+    margin: 0 1rem 0 .5rem;
+}
+
+.active .bi {
+    display: block !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    --bs-nav-pills-link-active-bg: rgba(66,175,71);
+    --bs-nav-link-color: rgba(66, 175, 71);
+    --bs-nav-link-hover-color: rgb(27, 147, 32);
+}
+
+.nav {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    --bs-nav-link-color: rgba(66, 175, 71);
+    --bs-nav-link-hover-color: rgb(27, 147, 32);
+}
+
+input[type="checkbox"]:checked {
+    margin-right: 0.2rem;
+}
+
+button {
+    width: 6rem;
+    padding: 0.1rem;
+    border-radius: 4px;
+}
+
+#stop {
+    color: rgb(219,170,101);
+}
+
+#zoom-reset {
+    color: rgba(164,147,113, 1);
+}
+
+canvas {
+    margin-top: 2em;
+}

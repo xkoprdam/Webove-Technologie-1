@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://webte1.fei.stuba.sk/~xkoprdam/z2/main.css">
+    <title>FormulaR</title>
+</head>
+<body>
+    
+    <header>
+        <h2>FormulaR</h2>
+    </header>
+    <form id="formular" action="https://form2mail.iolab.sk/form2mail.php" method="post" enctype="multipart/form-data" onsubmit="return(validateForm())">
+        <div class="container">
+            <div class="column">
+                <input type="hidden" name="apikey" value="1c13d239c743840d97d69540f738712b">
+
+                <input type="hidden" name="from" value="xkoprdam@stuba.sk">
+                <input type="hidden" name="sender" value="Matej Koprda">
+                <input type="hidden" name="to" value="feistu02@gmail.com">
+                <!-- Pri odovzdani nezabudnut zmenit mail na feistu... podla cviciaceho -->
+                <input type="hidden" name="subject" value="WEBTE Formular Koprda">
+                <input type="hidden" name="redirectOk" value="https://webte1.fei.stuba.sk/~xkoprdam/z2/success.html">
+                <input type="hidden" name="redirectFalse" value="https://webte1.fei.stuba.sk/~xkoprdam/z2/failure.html">
+
+
+                <label for="firstname" class="required">Meno:</label>
+                <br>
+                <input type="text" id="firstname" name="firstname" placeholder="napr. Patrik" onfocusout="validateIsEmpty('povinný údaj', 'firstname', 'err-firstname')">
+                <span class="err-msg default-hidden" id="err-firstname">.</span>
+                <br><br>
+
+                <label for="surname" class="required">Priezvisko:</label>
+                <br>
+                <input type="text" id="surname" name="surname" placeholder="napr. Vrbovský" onfocusout="validateIsEmpty('povinný údaj', 'surname', 'err-surname')">
+                <span class="err-msg default-hidden" id="err-surname">.</span>
+                <br><br>
+
+                <label id="radio-group" class="required">Pohlavie:</label>
+                <br>
+                <label class="radio" for="male"><input type="radio" id="male" value="male" name="sex" onchange="toggleCheckboxVisibility()">muž&nbsp;</label>
+                <label class="radio" for="female"><input type="radio" id="female" value="female" name="sex" onchange="toggleCheckboxVisibility()">žena&nbsp;</label>
+                <label class="radio" for="other"><input type="radio" id="other" value="other" name="sex" onchange="toggleCheckboxVisibility()">iné&nbsp;</label>
+                <br><br>
+
+                <label for="birthdate" class="required">Dátum narodenia:</label>
+                <br>
+                <input type="date" id="birthdate" name="birthdate" onfocusout="validateIsEmpty('povinný údaj', 'birthdate', 'err-birthdate')">
+                <span class="err-msg default-hidden" id="err-birthdate">.</span>
+                <br><br>
+
+                <label for="age" class="required">Vek:</label>
+                <br>
+                <input type="number" id="age" name="age" placeholder="Zadajte vek" onfocusout="validateIsEmpty('povinný údaj', 'age', 'err-age')">
+                <span class="err-msg default-hidden" id="err-age">.</span>
+                <br><br>
+
+                <label for="email" class="required" >e-mail:</label>
+                <br>
+                <input id="email" type="email" name="email" placeholder="michal@straka.kf" onfocusout="validateEmail(document.getElementById('email'))">
+                <span class="err-msg default-hidden" id="err-email">.</span>
+                <br><br>
+
+                <label for="phone">telefónne číslo:</label>
+                <br>
+                <input id="phone" type="tel" name="phone" placeholder="+421900123456" onfocusout="validatePhone(document.getElementById('phone'))">
+                <span class="err-msg default-hidden" id="err-phone">.</span>
+
+            </div>
+
+            <div class="column">
+                <div>
+                    Vyberte si obľúbeného jazdca F1 podľa auta.
+                    <br><br>
+                    <label id="manufacturer-label" for="manufacturer" class="list required">Výrobca motora:</label>
+                    <select id="manufacturer" name="manufacturer" onfocusout="validateIsEmpty('povinný údaj', 'manufacturer', 'err-manufacturer')">
+                        <option selected="" value="">Vyberte...</option>
+                        <option value="Ferrari">Ferrari</option>
+                        <option value="Honda">Honda RBPT</option>
+                        <option value="Mercedes">Mercedes</option>
+                        <option value="Renault">Renault</option>
+                    </select>
+                    <span class="err-msg default-hidden" id="err-manufacturer">.</span>
+                    <br>
+
+                    <label id="team-label" class="default-hidden list required" for="team">Stajňa:</label>
+                    <select id="team" class="default-hidden" name="team" onfocusout="validateIsEmpty('povinný údaj', 'team', 'err-team')">
+                        <option selected="" value="">Vyberte...</option>
+                        <option value="Scuderia">Scuderia Ferrari</option>
+                        <option value="Alfa">Alfa Romeo</option>
+                        <option value="Haas">Haas</option>
+                        <option value="RB">Red Bull Racing</option>
+                        <option value="Alphatauri">Alphatauri</option>
+                        <option value="Mercedes">Mercedes</option>
+                        <option value="McLaren">McLaren</option>
+                        <option value="Aston">Aston Martin</option>
+                        <option value="Williams">Williams</option>
+                        <option value="Alpine">Alpine</option>
+                    </select>
+                    <span class="err-msg default-hidden" id="err-team">.</span>
+                    <br>
+
+                    <label id="driver-label" class="default-hidden list required" for="driver">Jazdec:</label>
+                    <select id="driver" class="default-hidden" name="driver"  onfocusout="validateIsEmpty('povinný údaj', 'driver', 'err-driver')">
+                        <option selected="" value="">Vyberte...</option>
+                        <option value="VER">Max Verstappen</option>
+                        <option value="PER">Sergio Pérez</option>
+                        <option value="LEC">Charles Leclerc</option>
+                        <option value="SAI">Carlos Sainz</option>
+                        <option value="HAM">Lewis Hamilton</option>
+                        <option value="RUS">George Russel</option>
+                        <option value="NOR">Lando Norris</option>
+                        <option value="PIA">Oscar Piastri</option>
+                        <option value="ALO">Fernando Alonso</option>
+                        <option value="povolanie-syn">Lance Stroll</option>
+                        <option value="ALB">Alexander Albon</option>
+                        <option value="SAR">Logan Sargeant</option>
+                        <option value="OCO">Esteban Ocon</option>
+                        <option value="GAS">Pierre Gasly</option>
+                        <option value="TSU">Yuki Tsunoda</option>
+                        <option value="RIC">Daniel Ricciardo</option>
+                        <option value="DEV">Nyck de Vries</option>
+                        <option value="LAW">Liam Lawson</option>
+                        <option value="BOT">Valtteri Bottas</option>
+                        <option value="ZHO">Zhou Guanyu</option>
+                        <option value="MAG">Kevin Magnussen</option>
+                        <option value="HUL">Nico Hülkenberg</option>
+                    </select>
+                    <span class="err-msg default-hidden" id="err-driver">.</span>
+                    <br><br>
+                </div>
+                <div>
+                    Tomuto jazdcovi fandím pretože:
+                    <br><label id="fesak" class="default-hidden">
+                        <input type="checkbox"> páči sa mi (fešák)
+                    </label>
+                    <br><label><input type="checkbox"> fandím jeho tímu</label>
+                    <br><label><input type="checkbox"> fandím mu odjakživa</label>
+                    <br><label><input type="checkbox"> páči sa mi jeho jazdecký štýl</label>
+                    <br><label><input type="checkbox"> je vtipný</label>
+                    <br><label><input id="checkbox-additional-text" type="checkbox"> iný dôvod</label>
+                    <br>
+                    <label>
+                        <textarea id="additional-text" class="default-hidden" name="additional-text" placeholder="Tu napíšte dôvod."></textarea>
+                    </label>
+                    <div id="char-count" class="default-hidden">0 / 100</div>
+                </div>
+            </div>
+
+            <div id="summary" class="modal">
+
+                <div class="modal-window">
+                    <span class="close">&times;</span>
+                    <div class="modal-content"></div>
+                    <input type="submit" value="Odošli FormulaR">
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+
+    <br>
+    <div class="button-container">
+        <button id="myBtn">Sumarizuj FormulaR</button>
+    </div>
+
+</body>
+
+<script src="main.js"></script>
+</html>

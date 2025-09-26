@@ -1,0 +1,50 @@
+# --- macOS system files ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# --- Java compiled files ---
+*.class
+*.war
+*.ear
+*.jar
+
+# --- Log files ---
+*.log
+
+# --- BlueJ files ---
+*.ctxt
+
+# --- Package distribution ---
+*.zip
+*.tar.gz
+*.rar
+
+# --- JVM crash logs ---
+hs_err_pid*
+
+# --- IntelliJ IDEA ---
+.idea/
+*.iml
+out/
+
+# --- Eclipse ---
+.project
+.classpath
+.settings/
+bin/
+
+# --- NetBeans ---
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# --- VS Code ---
+.vscode/
