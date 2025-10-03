@@ -77,7 +77,6 @@ function getImages() {
 
                 carouselItem.appendChild(imageDescription);
 
-
                 if (count === 0) {
                     indicator.classList.add('active');
                     carouselItem.classList.add('active');
@@ -100,7 +99,7 @@ document.getElementById('slideshowButton').addEventListener('click', function() 
         slideShowInterval = setInterval(function() {
             // Trigger click event on the next button
             document.querySelector('.carousel-control-next').click();
-        }, 2000); // Change image every 2 seconds
+        }, 2000); // every 2 seconds
         button.textContent = 'Zastav slideshow';
     } else {
         clearInterval(slideShowInterval);

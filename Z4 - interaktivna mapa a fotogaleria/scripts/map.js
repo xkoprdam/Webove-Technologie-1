@@ -43,6 +43,7 @@ async function getDataFromJsonFile(filePath) {
         }
     }));
     // console.log(features);
+
     // Return the features as a FeatureCollection
     return {
         type: 'FeatureCollection',
@@ -52,21 +53,18 @@ async function getDataFromJsonFile(filePath) {
 
 getDataFromJsonFile('../data/images.json')
     .then(geojson => {
-        // You can now use the geojson data
         console.log(geojson);
 
         // add markers to map
         for (const feature of geojson.features) {
-            // create a HTML element for each feature
             const el = document.createElement('div');
             el.className = 'marker';
 
-            console.log(feature.properties.url);
-            // make a marker for each feature and add to the map
+            // console.log(feature.properties.url);
             new mapboxgl.Marker(el)
                 .setLngLat(feature.geometry.coordinates)
                 .setPopup(
-                    new mapboxgl.Popup({ offset: 25 }) // add popups
+                    new mapboxgl.Popup({ offset: 25 })
                         .setHTML(
                             `<h3>${feature.properties.title}</h3>
                             <p>${feature.properties.timestamp}</p>
@@ -78,7 +76,6 @@ getDataFromJsonFile('../data/images.json')
         }
     })
     .catch(error => {
-        // Handle any errors
         console.error(error);
     });
 

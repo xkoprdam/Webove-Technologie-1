@@ -1,4 +1,3 @@
-// Function to fetch XML data
 function fetchXMLData(url) {
     return fetch(url)
         .then(response => response.text())
@@ -11,9 +10,15 @@ function fetchXMLData(url) {
 
 
 const gradeLabels = ['A', 'B', 'C', 'D', 'E', 'Fn', 'Fx'];
-const gradeColours = ['rgba(25,155,214, 1)', 'rgba(251,208,9, 1)', 'rgba(230,37,37, 1)',
-    'rgba(66,175,71, 1)', 'rgba(219,170,101, 1)', 'rgba(164,147,113, 1)', 'rgba(65,59,54, 1)'];
-
+const gradeColours = [  
+    'rgba(25,155,214, 1)', 
+    'rgba(251,208,9, 1)', 
+    'rgba(230,37,37, 1)',
+    'rgba(66,175,71, 1)', 
+    'rgba(219,170,101, 1)', 
+    'rgba(164,147,113, 1)', 
+    'rgba(65,59,54, 1)'
+];
 const yearLabels = [];
 const aValues = [];
 const bValues = [];

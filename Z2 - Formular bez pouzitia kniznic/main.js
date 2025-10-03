@@ -27,12 +27,9 @@ function validateIsEmpty(msg, inputID, errfieldID) {
 const radioButtons = document.querySelectorAll('input[name="sex"]');
 const radioGroup = document.getElementById('radio-group');
 
-// Add an event listener to the radio group
 radioGroup.addEventListener('change', function() {
-    // Check if at least one radio button is checked
     const atLeastOneChecked = [...radioButtons].some(button => button.checked);
 
-    // Toggle the 'required' attribute on the radio group based on the check status
     if (atLeastOneChecked) {
         radioGroup.removeAttribute('required');
     } else {
@@ -52,13 +49,11 @@ function toggleCheckboxVisibility() {
 }
 
 function validateEmail(email) {
-    // validateIsEmpty('Prosím vyplňte e-mail', 'email', 'err-email');
     // Regular expression for a valid email address
     const emailRegex = /^[a-zA-Z0-9._-]{3,}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
     // console.log(email + " is " + emailRegex.test(email));
 
-    // Test the email against the regular expression
     if (!emailRegex.test(email.value)) {
         displayError("Nesprávny formát", 'err-email');
         email.style.border = '2px solid red';
@@ -92,7 +87,7 @@ function validatePhone(phone) {
 let birthdate = document.getElementById('birthdate');
 birthdate.addEventListener("change", (event) => {
     let bday = new Date(event.target.value); // hodnota input fieldu od pouzivatela cize jeho datum narodenia
-    let today = new Date(); //dnesny datum
+    let today = new Date();
 
     let age = today.getFullYear() - bday.getFullYear();
     let month = today.getMonth() - bday.getMonth();
@@ -107,30 +102,30 @@ birthdate.addEventListener("change", (event) => {
 
 });
 
-// Get references to the select elements
+
 const manufacturerSelect = document.getElementById("manufacturer");
 const teamSelect = document.getElementById("team");
 const driverSelect = document.getElementById("driver");
 
-// Define a mapping of teams for each manufacturer
+
 const teamsByManufacturer = {
-    Ferrari: ["Scuderia Ferrari", "Alfa Romeo", "Haas"],
-    Honda: ["Red Bull Racing", "Alphatauri"],
-    Mercedes: ["Mercedes", "McLaren", "Aston Martin", "Williams"],
-    Renault: ["Alpine"]
+    Ferrari:    ["Scuderia Ferrari", "Alfa Romeo", "Haas"],
+    Honda:      ["Red Bull Racing", "Alphatauri"],
+    Mercedes:   ["Mercedes", "McLaren", "Aston Martin", "Williams"],
+    Renault:    ["Alpine"]
 };
 
 const driversByTeam = {
     "Scuderia Ferrari": ["Charles Leclerc", "Carlos Sainz"],
-    "Alfa Romeo": ["Valtteri Bottas", "Zhou Guanyu"],
-    Haas: ["Kevin Magnussen", "Nico Hülkenberg"],
-    "Red Bull Racing": ["Max Verstappen", "Sergio Pérez"],
-    Alphatauri: ["Yuki Tsunoda", "Daniel Ricciardo", "Nyck de Vries", "Liam Lawson"],
-    Alpine: ["Pierre Gasly", "Esteban Ocon"],
-    Mercedes: ["Lewis Hamilton", "George Russel"],
-    McLaren: ["Lando Norris", "Oscar Piastri"],
-    "Aston Martin": ["Fernando Alonso", "Lance Stroll"],
-    Williams: ["Alexander Albon", "Logan Sargeant"]
+    "Alfa Romeo":       ["Valtteri Bottas", "Zhou Guanyu"],
+    Haas:               ["Kevin Magnussen", "Nico Hülkenberg"],
+    "Red Bull Racing":  ["Max Verstappen", "Sergio Pérez"],
+    Alphatauri:         ["Yuki Tsunoda", "Daniel Ricciardo", "Nyck de Vries", "Liam Lawson"],
+    Alpine:             ["Pierre Gasly", "Esteban Ocon"],
+    Mercedes:           ["Lewis Hamilton", "George Russel"],
+    McLaren:            ["Lando Norris", "Oscar Piastri"],
+    "Aston Martin":     ["Fernando Alonso", "Lance Stroll"],
+    Williams:           ["Alexander Albon", "Logan Sargeant"]
 };
 
 // Function to update the teams select element based on the selected manufacturer
@@ -195,7 +190,7 @@ teamSelect.addEventListener("change", updateDrivers);
 // Initially call the updateTeams function to populate the teams select element
 updateTeams();
 
-const maxChars = 100; // Change this to your desired character limit
+const maxChars = 100;
 const checkbox = document.getElementById('checkbox-additional-text');
 const textarea = document.getElementById('additional-text');
 const charcount= document.getElementById('char-count');
@@ -214,10 +209,8 @@ textarea.addEventListener("input", function() {
     const text = textarea.value;
     const length = text.length;
 
-    // Update the character count display
     charcount.textContent = length + " / " + maxChars;
 
-    // Add or remove a CSS class to style the textarea based on character limit
     if (length > maxChars) {
         textarea.classList.add("max-char-exceeded");
     } else {
@@ -231,25 +224,20 @@ textarea.addEventListener("input", function() {
 });
 
 
-// Get the modal
 var summary = document.getElementById("summary");
-
-// Get the button that opens the modal
 var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 const form = document.getElementById('formular');
 const modalContent = document.querySelector('.modal-content');
 
-// When the user clicks the button, open the modal
-btn.onclick = function() {
 
+btn.onclick = function() {
 
     const name = document.getElementById('firstname').value;
     const surname = document.getElementById('surname').value;
     let sex = null;
+
     if (document.getElementById('male').checked) {
         sex = 'muž';
     } else if (document.getElementById('female').checked) {
@@ -257,6 +245,7 @@ btn.onclick = function() {
     } else if (document.getElementById('other').checked) {
         sex = 'iné';
     }
+
     const birthdate = document.getElementById('birthdate').value;
     const age = document.getElementById('age').value;
     const driver = document.getElementById('driver').value;
@@ -268,7 +257,6 @@ btn.onclick = function() {
         return;
     }
 
-    // Update the modal content with the form values
     modalContent.innerHTML = `
         <h3>Sumár</h3>
         <br>
